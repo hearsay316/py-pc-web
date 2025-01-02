@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>Fancy Hill</title>
-
-    <!-- Recommended meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <!-- PyScript CSS -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.2/core.css">
-
-    <!-- This script tag bootstraps PyScript -->
-    <script type="module" src="https://pyscript.net/releases/2024.10.2/core.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>PyScript Data Visualization</title>
+    <link rel="stylesheet" href="https://pyscript.net/snapshots/2024.9.2/core.css"/>
+    <script type="module" src="https://pyscript.net/snapshots/2024.9.2/core.js"></script>
 </head>
 <body>
-<script type="py" src="./main.py" config="./pyscript.toml" terminal></script>
+<py-config>
+    packages = ["numpy", "matplotlib"]
+</py-config>
+
+<py-script>
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    x = np.linspace(0, 10, 100)
+    y = np.sin(x)
+    plt.plot(x, y)
+    plt.show()
+</py-script>
 </body>
 </html>
